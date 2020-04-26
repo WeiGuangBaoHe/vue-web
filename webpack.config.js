@@ -9,6 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  devServer: {
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
@@ -23,5 +26,5 @@ module.exports = {
       template: path.resolve(__dirname, 'public/index.html')
     }),
     new VueLoaderPlugin(),
-  ]
+  ],
 }
